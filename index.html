@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aleeza Saleem's Interactive Resume</title>
+  <link rel="icon" href="./img/favicon.ico">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      text-align: center;
+      padding: 20px;
+      background-color: #2C3E50;
+      color: white;
+    }
+
+    header h1 {
+      font-size: 36px;
+    }
+
+    header p {
+      font-size: 18px;
+      line-height: 1.5;
+      margin-top: 10px;
+    }
+
+    header img {
+      border-radius: 50%;
+      width: 120px;
+      margin-bottom: 20px;
+    }
+
+    header a {
+      margin: 0 10px;
+      color: white;
+      font-size: 20px;
+      text-decoration: none;
+    }
+
+    header a:hover {
+      color: #f39c12;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    section {
+      margin-bottom: 30px;
+    }
+
+    section h3 {
+      font-size: 28px;
+      color: #2C3E50;
+      border-bottom: 2px solid #2980B9;
+      padding-bottom: 5px;
+      margin-bottom: 15px;
+    }
+
+    .course, .job-title {
+      margin-bottom: 20px;
+    }
+
+    .course h4, .job-title strong {
+      font-size: 20px;
+      color: #2980B9;
+    }
+
+    .course p, .descrition p {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    .skills {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .skills .column {
+      width: 45%;
+    }
+
+    .skills ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .skills ul li {
+      background-color: #ECF0F1;
+      padding: 10px 15px;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Stylish Button */
+    #toggleSkillsButton {
+      background-color: #2980B9;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 18px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.3s;
+      margin: 20px auto;
+      display: block;
+    }
+
+    #toggleSkillsButton:hover {
+      background-color: #3498db;
+      transform: translateY(-3px);
+    }
+
+    #toggleSkillsButton:active {
+      transform: translateY(1px);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #2C3E50;
+      color: white;
+    }
+
+    footer a {
+      color: white;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: #f39c12;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div>
+      <!-- Removed Profile Image Placeholder -->
+    </div>
+    <h1>Aleeza Saleem</h1>
+    <p>A passionate and detail-oriented software developer with a strong foundation in web development, specializing in JavaScript, TypeScript, and modern frameworks like React and Node.js. I thrive in collaborative environments and am committed to continuous learning and development.</p>
+    <section>
+      <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="https://github.com/ritaly" target="_blank"><i class="fab fa-github-alt"></i></a>
+      <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/in/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+    </section>
+  </header>
+
+  <main>
+    <!-- Courses Section -->
+    <section>
+      <h3>Courses & Workshops</h3>
+      <article class="course">
+        <h4>PIAIC:Certified Cloud Applied & Generative AI
+            Engineer</h4>
+        <p>Learned full stack  fundamentals and how to build web applications with Python and frameworks like React and Next js .</p>
+      </article>
+      <article class="course">
+        <h4>Udemy: The Web Developer Bootcamp</h4>
+        <p>Built full-stack applications with HTML, CSS, JavaScript, NodeJS, and MongoDB.</p>
+      </article>
+      <article class="course">
+        <h4>EdX: Web Programming with JavaScript</h4>
+        <p>Explored JavaScript, JSON, and how to create RESTful APIs for modern web applications.</p>
+      </article>
+      <article class="course">
+        <h4>Django 2-Day Workshops</h4>
+        <p>Worked on back-end development with a focus on Django framework, building small applications.</p>
+      </article>
+    </section>
+
+    <!-- Button to toggle the Skills section -->
+    <button id="toggleSkillsButton">Show Skills</button>
+
+    <!-- Skills Section -->
+    <section id="skillsSection" style="display: none;">
+      <h3>Skills</h3>
+      <div class="skills">
+        <div class="column">
+          <h4>Proficient In</h4>
+          <ul>
+            <li>HTML5</li>
+            <li>CSS</li>
+            <li>JavaScript (ES6+)</li>
+            <li>TypeScript</li>
+            <li>SQL</li>
+          </ul>
+        </div>
+        <div class="column">
+          <h4>Basic Knowledge</h4>
+          <ul>
+            <li>NodeJS</li>
+            <li>MongoDB</li>
+            <li>Next Js</li>
+            <li>React</li>
+            <li>Python</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section>
+      <h3>Education</h3>
+      <article>
+        <strong>The Elonera School System</strong>  
+        <p>MATRICULATION IN COMPUTER SCIENCE</p>
+      </article>
+      <article>
+        <strong>E-Complex College of Science & Commerce</strong>
+        <p>INTERMEDIATE IN COMPUTER SCIENCE</p>
+      </article>
+    </section>
+
+    <!-- Experience Section -->
+    <section>
+      <h3>Experience</h3>
+      <article>
+        <strong>Remote Job: Get Direct Holidays (Manchester,UK)</strong>  
+        <p><strong>Role:</strong> Frontend Developer</p>
+        <p><strong>Technologies:</strong> Typescript,Next Js,Tailwind CSS</p>
+        <ul>
+          <li> Developed Frontend applications using the latest technologies
+            Front-end development with React.js and Next.js.</li>
+          <li>Styling expertise with Tailwind CSS, MUI, Chakra UI, Shadcn
+            UI, and Custom CSS</li>
+          <li>Content management through Contentful and Sanity (Headless
+            CMS).</li>
+        </ul>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <p>Created by: Aleeza Saleem| <a href="https://www.linkedin.com/in/aleeza-saleem-509b37259/">LinkedIn</a> | 2023</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
